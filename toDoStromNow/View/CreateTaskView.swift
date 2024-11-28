@@ -49,7 +49,7 @@ struct CreateTask: View {
 
 extension CreateTask {
     func addTask() {
-        let task = Taskmodel(title: title, details: details, priority: priority)
+        let task = Taskmodel(title: title, details: details, priority: priority, aiTask: false)
         modelContext.insert(task)
     }
 }
