@@ -19,31 +19,35 @@ struct CreateTask: View {
     @State var priority: Priority = .low
 
     var body: some View {
-        Form {
-            // Title TextField
-            TextField("Title", text: $title)
-
-            // Details TextField
-            TextField("Details", text: Binding(
-                get: { details ?? "" },
-                set: { details = $0.isEmpty ? nil : $0 }
-            ))
-
-            // Priority Picker
-            Picker("Priority", selection: $priority) {
-                ForEach(Priority.allCases) { priority in
-                    Text(priority.rawValue.capitalized).tag(priority)
+        NavigationView{
+            Form {
+                // Title TextField
+                TextField("Title", text: $title)
+                
+                // Details TextField
+                TextField("Details", text: Binding(
+                    get: { details ?? "" },
+                    set: { details = $0.isEmpty ? nil : $0 }
+                ))
+                
+                // Priority Picker
+                Picker("Priority", selection: $priority) {
+                    ForEach(Priority.allCases) { priority in
+                        Text(priority.rawValue.capitalized).tag(priority)
+                    }
                 }
+                .pickerStyle(.menu)
+                
+                // Test Button
+                Button("Add Task") {
+                    addTask()
+                    dismiss()
+                }
+                .buttonStyle(.automatic)
             }
-            .pickerStyle(.menu)
-
-            // Test Button
-            Button("Add Task") {
-                addTask()
-                dismiss()
-            }
-            .buttonStyle(.automatic)
         }
+        .navigationTitle("Create Task")
+
     }
 }
 

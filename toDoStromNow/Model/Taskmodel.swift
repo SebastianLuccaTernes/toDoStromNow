@@ -21,11 +21,13 @@ class Taskmodel {
     var details: String?
     var isCompleted: Bool
     var priority: Priority?
+    var aiTask: Bool?
 
-    init(title: String, details: String? = nil, isCompleted: Bool = false, priority: Priority? = nil) {
+    init(title: String, details: String? = nil, isCompleted: Bool = false, priority: Priority? = nil, aiTask: Bool?) {
         self.title = title
         self.details = details
         self.isCompleted = isCompleted
         self.priority = priority
+        self.aiTask = aiTask
     }
 }

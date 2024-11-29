@@ -54,7 +54,7 @@ struct TaskListView: View {
             }
             .sheet(isPresented: $addTask) {
                 NavigationStack {
-                    CreateTask()
+                    SheetView()
                         .presentationDetents([.medium])
                 }
             }
@@ -74,9 +74,9 @@ struct TaskListView: View {
         let container = try ModelContainer(for: Taskmodel.self, configurations: config)
 
         let context = container.mainContext
-        context.insert(Taskmodel(title: "Buy groceries", details: "Milk, eggs, bread", priority: .medium))
-        context.insert(Taskmodel(title: "Call mom", details: "Discuss weekend plans", priority: .high))
-        context.insert(Taskmodel(title: "Complete SwiftUI project", details: nil, priority: .low))
+        context.insert(Taskmodel(title: "Buy groceries", details: "Milk, eggs, bread", priority: .medium, aiTask: true))
+        context.insert(Taskmodel(title: "Call mom", details: "Discuss weekend plans", priority: .high, aiTask: true))
+        context.insert(Taskmodel(title: "Complete SwiftUI project", details: nil, priority: .low, aiTask: false))
 
         return
             TaskListView()

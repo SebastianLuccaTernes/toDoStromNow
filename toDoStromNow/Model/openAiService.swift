@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftData
 
 class OpenAIService {
-    private let apiKey = "YOUR_OPENAI_API_KEY" // Replace with your API key
+    private let apiKey = "OPEN AI API KEY" // Replace with your API key
 
     func generateTasks(for topic: String, completion: @escaping ([Taskmodel]?) -> Void) {
         let url = URL(string: "https://api.openai.com/v1/chat/completions")!

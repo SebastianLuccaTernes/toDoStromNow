@@ -22,10 +22,17 @@ struct TaskRowView: View {
             .buttonStyle(.plain)
 
             VStack(alignment: .leading) {
-                // Title
-                Text(task.title)
-                    .font(.headline)
+                
+                HStack{
+                    // Title
+                    Text(task.title)
+                        .font(.headline)
+                    if task.aiTask == true {
+                        Image(systemName: "sparkles")
+                            .foregroundStyle(.yellow)
+                    }
 
+                }
                 // Description
                 if let details = task.details {
                     Text(details)
@@ -75,6 +82,21 @@ extension TaskRowView {
     }
 }
 
-//#Preview {
-//    TaskRowView(task: TaskRowView.sampleTask)
-//}
+
+extension TaskRowView {
+    // Sample data for preview
+    static var sampleTask = Taskmodel(
+        title: "Sample Task",
+        details: "This is a test task",
+        isCompleted: false,
+        priority: .medium,
+        aiTask: false
+    )
+}
+
+
+#Preview {
+    TaskRowView(task: TaskRowView.sampleTask) {
+        Text("Edit")
+    }
+}

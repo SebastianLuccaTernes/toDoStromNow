@@ -43,11 +43,12 @@ struct AiTaskCreation: View {
                 }
                 .disabled(isLoading || mainTask.isEmpty)
             }
-            .navigationTitle("AI Task Creation")
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
             }
         }
+        .navigationTitle("Ai Task Creation")
+
     }
 }
 
