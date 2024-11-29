@@ -8,3 +8,6 @@ Nachdem die normale ToDo App stand musste ich mich mit der OpenAi Api auseinande
 
 Mögliche Verbesserung für die App wäre auf jeden fall tests. Außerdem die Previes mit SwiftData, aber da hab ich keinen besseren Weg gefunden. Außerdem glaub ich könnte ich meine generelle Code Struktur verbessern. 
 
+## Get it up and Running
+
+Einfach den OpenAi Api key in Model/openAiService file, in die Variable "apiKey" hinzufügen
