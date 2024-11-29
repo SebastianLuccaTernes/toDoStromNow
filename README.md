@@ -6,7 +6,7 @@ Also meine Inititale herangehensweise hab ich mir erstmal gedacht ich bau eine c
 
 Nachdem die normale ToDo App stand musste ich mich mit der OpenAi Api auseinandersetzten, da ich diese noch nie vervendet hatte bis jetzt, dehalb hab ich mir auch bei dem Prompt hilfe von ChatGpt geholt, und da dieser Prompt super funktioniert, wurde er nicht mehr viel verändert. Ich war erstaunt wie leicht die intergration mit ChatGpt war um ehrlich zu sein. 
 
-Mögliche Verbesserung für die App wäre auf jeden fall tests. Außerdem die Previes mit SwiftData, aber da hab ich keinen besseren Weg gefunden. Außerdem glaub ich könnte ich meine generelle Code Struktur verbessern. 
+Mögliche Verbesserung für die App wäre auf jeden fall tests. Außerdem die Previews mit SwiftData, aber da hab ich noch keinen besseren Weg gefunden. Außerdem glaub ich könnte ich meine generelle Code Struktur verbessern. 
 
 ## Get it up and Running
 
